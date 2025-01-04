@@ -1,5 +1,11 @@
 #!/bin/bash
 cd ~
+
+if [ -h ./.zshrc ]; then
+	rm ./.zshrc
+fi
+ln -s ~/dotfiles/zshrc/zshrc .zshrc
+
 if [ ! -d ./.config ]; then
 	mkdir .config
 fi
