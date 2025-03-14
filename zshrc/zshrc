@@ -74,6 +74,7 @@ ZSH_THEME="gnzh"
 plugins=(
 	git
 	colored-man-pages
+	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -110,3 +111,13 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export MANPAGER="nvim +Man!"
+
+# The following lines were added by compinstall
+
+zstyle ':completion:*' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' matcher-list ''
+zstyle :compinstall filename '/home/illyanda/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
