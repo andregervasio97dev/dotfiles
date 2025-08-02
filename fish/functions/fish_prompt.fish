@@ -10,9 +10,16 @@ function fish_prompt
 	set -g __fish_git_prompt_showcolorhints true
 	set -g __fish_git_prompt_showdirtystate true
 
-	set -g __fish_git_prompt_color white
-	set -g __fish_git_prompt_color_branch_dirty yellow
-	set -g __fish_git_prompt_color_dirtystate yellow
+	set -g __fish_git_prompt_color cyan
+	set -g __fish_git_prompt_color_dirtystate ff10f0
+
+	set -g __fish_git_prompt_color_branch cyan 
+	set -g __fish_git_prompt_color_branch_dirty ff10f0
+
+	set -g __fish_git_prompt_color_cleanstate cyan 
+	set -g __fish_git_prompt_color_dirtystate ff10f0 
+	set -g __fish_git_prompt_color_stagedstate green 
+
 	set -l git_status (set_color normal) (fish_git_prompt)
 
 	set -l stat
