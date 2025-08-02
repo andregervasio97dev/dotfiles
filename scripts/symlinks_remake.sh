@@ -1,11 +1,6 @@
 #!/bin/bash
 cd ~
 
-if [ -h ./.zshrc ]; then
-	rm ./.zshrc
-fi
-ln -s ~/dotfiles/zshrc/zshrc .zshrc
-
 if [ ! -d ./.config ]; then
 	mkdir .config
 fi
@@ -18,3 +13,9 @@ elif [ -d ./kitty ]; then
 fi
 ln -s ~/dotfiles/kitty kitty
 
+if [ -h ./fish ]; then
+	rm ./fish
+elif [ -d ./fish ]; then
+	rm -rf ./fish
+fi
+ln -s ~/dotfiles/fish fish
