@@ -12,9 +12,11 @@ function fish_prompt
 
 	set -g __fish_git_prompt_color cyan
 	set -g __fish_git_prompt_color_dirtystate ff10f0
+	set -g __fish_git_prompt_color_stagedstate green
 
 	set -g __fish_git_prompt_color_branch cyan 
 	set -g __fish_git_prompt_color_branch_dirty ff10f0
+	set -g __fish_git_prompt_color_branch_staged green
 
 	set -g __fish_git_prompt_color_cleanstate cyan 
 	set -g __fish_git_prompt_color_dirtystate ff10f0 
