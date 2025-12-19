@@ -20,6 +20,7 @@ basePrograms=(
 	ripgrep
 	eza
 	fd
+	fish
 	flatpak
 )
 
