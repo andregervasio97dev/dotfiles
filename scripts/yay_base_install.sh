@@ -53,8 +53,15 @@ gaming=(
 	steam
 )
 
+flatpak=(
+	net.waterfox.waterfox
+)
+
 yes "" | yay -S "${basePrograms[@]}"
 yes "" | yay -S "${tuiPrograms[@]}"
 yes "" | yay -S "${guiPrograms[@]}"
 yes "" | yay -S "${developmentPrograms[@]}"
 yes "" | yay -S "${gaming[@]}"
+yes "" | flatpak install flathub "${flatpak[@]}"
+
+
