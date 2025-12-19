@@ -3,6 +3,10 @@
 yes "" | yay -Syu
 
 basePrograms=(
+	less
+	more
+	man-db
+	man-pages
 	git
 	grep
 	cmake
