@@ -1,4 +1,4 @@
-#!/bin/bash
+#!usr/bin/env bash
 
 yes "" | yay -Syu
 
@@ -22,6 +22,7 @@ basePrograms=(
 	fd
 	fish
 	flatpak
+	bat
 )
 
 tuiPrograms=(
