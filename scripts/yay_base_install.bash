@@ -50,6 +50,10 @@ developmentPrograms=(
 	github-cli
 )
 
+fonts=(
+	ttf-0xproto-nerd
+)
+
 gaming=(
 	steam
 )
@@ -62,6 +66,7 @@ yes "" | yay -S "${basePrograms[@]}"
 yes "" | yay -S "${tuiPrograms[@]}"
 yes "" | yay -S "${guiPrograms[@]}"
 yes "" | yay -S "${developmentPrograms[@]}"
+yes "" | yay -S "${fonts[@]}"
 yes "" | yay -S "${gaming[@]}"
 yes "" | flatpak install flathub "${flatpak[@]}"
 
