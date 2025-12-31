@@ -3,7 +3,7 @@
 
 # Setup git for the prompt 
 export GIT_PS1_SHOWDIRTYSTATE=1
-source ~/dotfiles/git-prompt.sh
+source ~/dotfiles/bash/git-prompt.sh
 
 # Aliases
 source ~/dotfiles/bash/bash_aliases.bash

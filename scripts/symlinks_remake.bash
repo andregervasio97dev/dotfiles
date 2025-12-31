@@ -9,10 +9,12 @@
 
 cd ~
 
-if [[ -e ./.bashrc ]]; then
+if [[ -h ./.bashrc || -f ./.bashrc ]]; then
+	rm ./.bashrc
+elif [[ -d ./.bashrc ]]; then
 	rm -rf ./.bashrc
 fi
-ln -s ~/dotfiles/.bashrc .bashrc
+ln -s ~/dotfiles/bash/.bashrc .bashrc
 
 if [[ ! -d ./.config ]]; then
 	mkdir .config

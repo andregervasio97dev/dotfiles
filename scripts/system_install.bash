@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ~/dotfiles/bash/colors.bash
+
 yay_installation() {
 
 	local DEPENDENCIES=(
@@ -8,37 +10,37 @@ yay_installation() {
 		base-devel
 	)
 
-	echo "Installing Dependencies"
+	echo -e "${GREEN}Installing Dependencies...${RESET}"
 	if ! sudo pacman -S --needed --noconfirm "${DEPENDENCIES[@]}"; then
-		echo "Error while installing Dependencies." >&2
+		echo -e "${RED}Error while installing Dependencies.${RESET}" >&2
 		return 1
 	fi
 
-	echo "Installing yay"
+	echo -e "${GREEN}Installing yay${RESET}"
 	if ! cd ~; then
-		echo "Could not reach home directory" >&2
+		echo -e "${RED}Could not reach home directory${RESET}" >&2
 		return 1
 	fi
 
 	if ! git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si; then
-		echo "Error during yay installation" >&2
+		echo -e "${RED}Error during yay installation${RESET}" >&2
 		return 1
 	fi
 
-	echo "Running base yay configuration"
+	echo -e "${GREEN}Running base yay configuration${RESET}"
 	if ! yay -Y --gendb && yay -Y --devel --save; then
-		echo "Error while configuring yay" >&2
+		echo -e "${RED}Error while configuring yay${RESET}" >&2
 		return 1
 	fi
 
-	echo "Yay instalation successful."
+	echo -e "${GREEN}Yay instalation successful.${RESET}"
 	return 0
 }
 
 # Program Start
-echo "Updating/Upgrading base packages"
+echo -e "${GREEN}Updating/Upgrading base packages${RESET}"
 if ! sudo pacman -Syu --noconfirm; then
-	echo "Error while updating/upgrading system." >&2
+	echo -e "${RED}Error while updating/upgrading system.${RESET}" >&2
 	exit 1
 fi
 
@@ -54,4 +56,4 @@ if ! chmod +x ./yay_base_install.bash && bash ./yay_base_install.bash; then
 	exit 1
 fi
 
-echo "Complete system instalation successful."
+echo -e "${GREEN}Complete system instalation successful.${RESET}"

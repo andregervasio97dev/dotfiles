@@ -1,6 +1,8 @@
 #!usr/bin/env bash
 
-yes "" | yay -Syu
+source ~/dotfiles/bash/colors.bash
+
+yay -Syu --noconfirm
 
 basePrograms=(
 	less
@@ -65,12 +67,25 @@ flatpak=(
 	net.waterfox.waterfox
 )
 
-yes "" | yay -S "${basePrograms[@]}"
-yes "" | yay -S "${tuiPrograms[@]}"
-yes "" | yay -S "${guiPrograms[@]}"
-yes "" | yay -S "${developmentPrograms[@]}"
-yes "" | yay -S "${fonts[@]}"
-yes "" | yay -S "${gaming[@]}"
-yes "" | flatpak install flathub "${flatpak[@]}"
+if ! yay -S --noconfirm "${basePrograms[@]}"; then 
+	echo -e "${RED}Error while installing basePrograms${RESET}"
+fi
+if ! yay -S --noconfirm "${tuiPrograms[@]}"; then 
+	echo -e "${RED}Error while installing tuiPrograms${RESET}"
+fi
+if ! yay -S --noconfirm "${guiPrograms[@]}"; then 
+	echo -e "${RED}Error while installing guiPrograms${RESET}"
+fi
+if ! yay -S --noconfirm "${developmentPrograms[@]}"; then
+	echo -e "${RED}Error while installing developmentPrograms${RESET}"
+fi
+if ! yay -S --noconfirm "${fonts[@]}"; then 
+	echo -e "${RED}Error while installing fonts${RESET}"
+fi
+if ! yay -S --noconfirm "${gaming[@]}"; then 
+	echo -e "${RED}Error while installing gaming${RESET}"
+fi
+
+flatpak install flathub "${flatpak[@]}"
 
 
