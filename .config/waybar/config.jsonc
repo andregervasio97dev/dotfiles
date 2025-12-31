@@ -1,5 +1,19 @@
 {
 	"include": [
-		"./modules/*.jsonc"
-	]
+		"./modules/*.jsonc",
+		"./modules/custom/*.jsonc"
+	],
+	"modules-left": [],
+	"modules-center": [],
+	"modules-right": [
+		"battery"
+	],
+	/* Options */
+	"layer": "top",
+	"height": 0,
+	"width": 0,
+	"margin": 0,
+	"spacing": 0,
+	"dock": "dock",
+	"reload_style_on_change": true
 }
