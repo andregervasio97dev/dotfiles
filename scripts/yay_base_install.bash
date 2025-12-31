@@ -23,6 +23,8 @@ basePrograms=(
 	fish
 	flatpak
 	bat
+	wl-clipboard
+	clipse
 )
 
 tuiPrograms=(
