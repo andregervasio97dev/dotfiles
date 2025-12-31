@@ -67,6 +67,8 @@ flatpak=(
 	net.waterfox.waterfox
 )
 
+echo -e "${GREEN}Running programs installation...${RESET}"
+
 if ! yay -S --noconfirm "${basePrograms[@]}"; then 
 	echo -e "${RED}Error while installing basePrograms${RESET}"
 fi
@@ -88,4 +90,4 @@ fi
 
 flatpak install flathub "${flatpak[@]}"
 
-
+echo -e "${GREEN}Installation successful${RESET}"

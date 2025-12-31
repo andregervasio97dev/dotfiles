@@ -49,10 +49,13 @@ if  ! yay --version; then
 	if ! yay_installation; then
 		exit 1
 	fi
+else
+	echo -e "${GREEN}Yay already installed${RESET}"
 fi
 
 # Runs script for installing packages
-if ! chmod +x ./yay_base_install.bash && bash ./yay_base_install.bash; then
+chmod -v +x ~/dotfiles/scripts/yay_base_install.bash
+if ! bash ~/dotfiles/scripts/yay_base_install.bash; then
 	exit 1
 fi
 
