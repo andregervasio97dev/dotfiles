@@ -9,6 +9,11 @@
 
 cd ~
 
+if [[ -e ./.bashrc ]]; then
+	rm -rf ./.bashrc
+fi
+ln -s ~/dotfiles/.bashrc .bashrc
+
 if [[ ! -d ./.config ]]; then
 	mkdir .config
 fi
