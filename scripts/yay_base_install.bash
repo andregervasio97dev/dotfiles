@@ -48,6 +48,7 @@ developmentPrograms=(
 	docker
 	docker-compose
 	github-cli
+	npm
 )
 
 fonts=(
