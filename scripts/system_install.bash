@@ -60,3 +60,12 @@ if ! bash ~/dotfiles/scripts/yay_base_install.bash; then
 fi
 
 echo -e "${GREEN}Complete system instalation successful.${RESET}"
+
+# Runs script to create the symbolic links
+chmod -v +x ~/dotfiles/scripts/symlinks_remake.bash
+if ! bash ~/dotfiles/scripts/symlinks_remake.bash; then
+	echo -e "${RED}Error while creating symlinks${RESET}"
+	exit 1
+fi
+
+exit 0

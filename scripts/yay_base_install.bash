@@ -59,12 +59,9 @@ fonts=(
 	ttf-0xproto-nerd
 )
 
-gaming=(
-	steam
-)
-
 flatpak=(
 	net.waterfox.waterfox
+	com.valvesoftware.Steam
 )
 
 echo -e "${GREEN}Running programs installation...${RESET}"
@@ -88,6 +85,6 @@ if ! yay -S --noconfirm "${gaming[@]}"; then
 	echo -e "${RED}Error while installing gaming${RESET}"
 fi
 
-flatpak install flathub "${flatpak[@]}"
+flatpak install -y flathub "${flatpak[@]}"
 
 echo -e "${GREEN}Installation successful${RESET}"
