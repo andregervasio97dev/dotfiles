@@ -5,6 +5,7 @@ source ~/dotfiles/bash/colors.bash
 yay -Syu --noconfirm
 
 basePrograms=(
+	basename
 	less
 	more
 	man-db
@@ -27,6 +28,8 @@ basePrograms=(
 	bat
 	wl-clipboard
 	clipse
+	bluez
+	bluez-utils
 )
 
 tuiPrograms=(
@@ -76,6 +79,7 @@ hyprland=(
 	hyprshot
 	hyprlauncher
 	hyprpicker
+	waybar
 )
 
 flatpak=(

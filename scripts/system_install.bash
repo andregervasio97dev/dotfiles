@@ -68,4 +68,12 @@ if ! bash ~/dotfiles/scripts/symlinks_remake.bash; then
 	exit 1
 fi
 
+# Runs scripts for additional configurations
+if cd ~/dotfiles/scripts/; then
+	chmod -v +x ./configs_install.bash
+	if ! bash ./configs_install.bash; then
+		exit 1
+	fi
+fi
+
 exit 0
