@@ -59,6 +59,22 @@ fonts=(
 	ttf-0xproto-nerd
 )
 
+gaming=(
+	lib32-mesa
+	gamescope
+)
+
+hyprland=(
+	pipewire
+	wireplumber
+	qt5-wayland
+	qt6-wayland
+	xdg-desktop-portal-hyprland
+	xdg-desktop-portal-gtk
+	hyprpolkitagent
+	hyprpaper
+)
+
 flatpak=(
 	net.waterfox.waterfox
 	com.valvesoftware.Steam
@@ -83,6 +99,9 @@ if ! yay -S --noconfirm "${fonts[@]}"; then
 fi
 if ! yay -S --noconfirm "${gaming[@]}"; then 
 	echo -e "${RED}Error while installing gaming${RESET}"
+fi
+if ! yay -S --noconfirm "${hyprland[@]}"; then 
+	echo -e "${RED}Error while installing hyprland programs${RESET}"
 fi
 
 flatpak install -y flathub "${flatpak[@]}"
