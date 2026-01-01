@@ -60,7 +60,6 @@ fonts=(
 )
 
 gaming=(
-	lib32-mesa
 	gamescope
 )
 
@@ -73,10 +72,12 @@ hyprland=(
 	xdg-desktop-portal-gtk
 	hyprpolkitagent
 	hyprpaper
+	hyprshot
+	hyprlauncher
+	hyprpicker
 )
 
 flatpak=(
-	net.waterfox.waterfox
 	com.valvesoftware.Steam
 )
 
