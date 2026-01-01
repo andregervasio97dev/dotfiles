@@ -6,6 +6,10 @@
 	"modules-left": [],
 	"modules-center": [],
 	"modules-right": [
+		"network",
+		"mpris",
+		"group/pulseaudio",
+		"backlight",
 		"battery"
 	],
 	/* Options */
