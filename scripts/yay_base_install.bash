@@ -31,7 +31,6 @@ basePrograms=(
 
 tuiPrograms=(
 	btop
-	lazygit
 	impala
 	bluetui
 	uwufetch
@@ -53,6 +52,8 @@ developmentPrograms=(
 	docker-compose
 	github-cli
 	npm
+	lazygit
+	lazydocker
 )
 
 fonts=(

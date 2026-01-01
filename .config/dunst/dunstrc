@@ -1,0 +1,15 @@
+
+[global]
+	# Display # 
+	
+	monitor = 0
+	follow = keyboard
+	width = (300, 600)
+	height = (50, 200)
+	# notification_limit = 20
+	# origin = top-right
+	# offset = (10, 300) # Margin of 10 pixels from the right and 300 from the top
+	# scale = 0
+
+	# Text #
+	font = Monospace 12

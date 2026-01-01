@@ -30,12 +30,19 @@ fi
 ln -s ~/dotfiles/.config/kitty kitty
 
 # Fish
-if [[ -h ./fish ]]; then
-	rm ./fish
-elif [[ -d ./fish ]]; then
-	rm -rf ./fish
+# if [[ -h ./fish ]]; then
+# 	rm ./fish
+# elif [[ -d ./fish ]]; then
+# 	rm -rf ./fish
+# fi
+# ln -s ~/dotfiles/.config/fish fish
+
+if [[ -h ./dunst ]]; then
+	rm ./dunst
+elif [[ -d ./dunst ]]; then
+	rm -rf ./dunst
 fi
-ln -s ~/dotfiles/.config/fish fish
+ln -s ~/dotfiles/.config/dunst/ dunst
 
 # Hyprland and addons
 if [[ -h ./hypr ]]; then
