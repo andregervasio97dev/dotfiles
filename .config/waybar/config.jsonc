@@ -1,7 +1,13 @@
 {
 	"include": [
 		"./modules/*.jsonc",
-		"./modules/custom/*.jsonc"
+		"./modules/custom/*.jsonc",
+		/* modules-left */
+		"./modules/network.jsonc",
+		"./modules/mpris.jsonc",
+		"./modules/pulseaudio.jsonc",
+		"./modules/backlight.jsonc",
+		"./modules/battery.jsonc"
 	],
 	"modules-left": [],
 	"modules-center": [],
