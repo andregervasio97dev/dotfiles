@@ -1,8 +1,9 @@
 {
 	"include": [
-		"./modules/*.jsonc",
-		"./modules/custom/*.jsonc",
+		/* modules-center */
+		"./modules/clock.jsonc",
 		/* modules-left */
+		"./modules/bluetooth.jsonc",
 		"./modules/network.jsonc",
 		"./modules/mpris.jsonc",
 		"./modules/pulseaudio.jsonc",
@@ -10,8 +11,11 @@
 		"./modules/battery.jsonc"
 	],
 	"modules-left": [],
-	"modules-center": [],
+	"modules-center": [
+		"clock"
+	],
 	"modules-right": [
+		"bluetooth",
 		"network",
 		"mpris",
 		"group/pulseaudio",

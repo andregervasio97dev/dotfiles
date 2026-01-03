@@ -8,6 +8,7 @@ DEPENDENCIES=(
 	"libnotify"
 	"bluez"
 	"bluez-utils" # bluetoothctl
+	"bluetui"
 	"brightnessctl"
 	"fzf"
 	"pacman"-contrib # checkupdates
