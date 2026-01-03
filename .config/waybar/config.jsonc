@@ -1,8 +1,13 @@
 {
 	"include": [
+		/* modules-left */
+		"./modules/temperature.jsonc",
+		"./modules/cpu.jsonc",
+		"./modules/memory.jsonc",
+		"./modules/systemd-failed-units.jsonc",
 		/* modules-center */
 		"./modules/clock.jsonc",
-		/* modules-left */
+		/* modules-right */
 		"./modules/bluetooth.jsonc",
 		"./modules/network.jsonc",
 		"./modules/mpris.jsonc",
@@ -10,7 +15,12 @@
 		"./modules/backlight.jsonc",
 		"./modules/battery.jsonc"
 	],
-	"modules-left": [],
+	"modules-left": [
+		"temperature",
+		"cpu",
+		"memory",
+		"systemd-failed-units"
+	],
 	"modules-center": [
 		"clock"
 	],
