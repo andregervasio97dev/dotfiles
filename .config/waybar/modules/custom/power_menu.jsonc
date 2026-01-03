@@ -1,0 +1,37 @@
+{
+	"group/power_menu": {
+		"orientation": "inherit",
+		"drawer": {
+			"transition-duration": 200,
+			"transition-left-to-right": true,
+			"children-class": "power_menu-children",
+			"click-to-reveal": false
+		},
+		"modules": [
+			"custom/shutdown",
+			"custom/reboot",
+			"custom/lock",
+			"custom/exit"
+		]
+	},
+	"custom/shutdown": {
+		"format": "󰐥",
+		"tooltip": false,
+		"on-click": "shutdown -a now"
+	},
+	"custom/reboot": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "reboot"
+	},
+	"custom/lock": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "hyprlock --grace 2 --config ~/.config/hypr/addons/hyprlock/hyprlock.conf"
+	},
+	"custom/exit": {
+		"format": "󰈆",
+		"tooltip": false,
+		"on-click": "hyprctl dispatch exit"
+	}
+}

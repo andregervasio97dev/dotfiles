@@ -31,6 +31,7 @@ base_apps() {
 		btop
 		impala
 		bluetui
+		ncpamixer
 		uwufetch
 		caligula
 	

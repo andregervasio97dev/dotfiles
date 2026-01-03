@@ -1,6 +1,7 @@
 {
 	"include": [
 		/* modules-left */
+		"./modules/custom/power_menu.jsonc",
 		"./modules/temperature.jsonc",
 		"./modules/cpu.jsonc",
 		"./modules/memory.jsonc",
@@ -14,8 +15,10 @@
 		"./modules/pulseaudio.jsonc",
 		"./modules/backlight.jsonc",
 		"./modules/battery.jsonc"
+		/* Extra */
 	],
 	"modules-left": [
+		"group/power_menu",
 		"temperature",
 		"cpu",
 		"memory",
@@ -37,7 +40,7 @@
 	"height": 0,
 	"width": 0,
 	"margin": 0,
-	"spacing": 0,
+	"spacing": 5,
 	"dock": "dock",
 	"reload_style_on_change": true
 }

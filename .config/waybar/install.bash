@@ -13,6 +13,7 @@ DEPENDENCIES=(
 	"fzf"
 	"pacman"-contrib # checkupdates
 	"pipewire-pulse"
+	"ncpamixer"
 	"otf-commit-mono-nerd"
 	"impala"
 )
