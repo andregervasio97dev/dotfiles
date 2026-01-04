@@ -75,6 +75,7 @@ base_apps() {
 	
 	flatpak=(
 		com.valvesoftware.Steam
+		com.stremio.Stremio
 	)
 	
 	echo -e "${GREEN}Running programs installation...${RESET}"
