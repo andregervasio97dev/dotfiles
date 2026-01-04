@@ -4,7 +4,7 @@ source ~/dotfiles/bash/colors.bash
 base_apps() {
 	yay -Syu --noconfirm
 	
-	apps=(
+	local apps=(
 		# Base Programs #
 		less
 		man-db
@@ -73,7 +73,7 @@ base_apps() {
 		waybar
 	)
 	
-	flatpak=(
+	local flatpak=(
 		com.valvesoftware.Steam
 		com.stremio.Stremio
 	)
@@ -84,7 +84,7 @@ base_apps() {
 	for app in "${apps[@]}"; do
 		if ! yay -Qi "${app}" > /dev/null; then
 			if ! yay -S --noconfirm "${app}"; then
-				echo -e "${RED}Error while installing ${app}"
+				echo -e "${RED}Error while installing ${app}${RESET}"
 			fi
 		fi
 	done
@@ -92,7 +92,7 @@ base_apps() {
 	local flatpak_app
 	for flatpak_app in "${flatpak[@]}"; do
 		if ! flatpak install -y flathub "${flatpak_app}"; then
-			echo -e "${RED}Error while installing flatpak_app ${flatpak_app}"
+			echo -e "${RED}Error while installing flatpak_app ${flatpak_app}${RESET}"
 		fi
 	done
 	
