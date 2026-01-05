@@ -1,5 +1,8 @@
-# Bottom permanent line
+# csr     cs      Change scrolling region to lines #1 through #2 (P)
 LINES=$(tput lines)
+COLS=$(tput cols)
+
+source ~/dotfiles/bash/colors.bash
 
 set_window()
 {
@@ -12,10 +15,13 @@ set_window
 
 sticky_text()
 {
-    # Move cursor to last line in your screen
-    tput cup $LINES 0;
+	local output_string="${GREEN}--- EXECUTING [${YELLOW}$1${GREEN}] ---${RESET}"
+	local initial_col=$(($COLS - ${#output_string}))
 
-    echo -n "--- EXECUTING [$1]  ---"
+    # Move cursor to last line, centered in your screen
+	tput cup $LINES $(($initial_col/2));
+
+    echo -n -e "${output_string}"
 
     # Move cursor to home position, back in virtual window
     tput cup 0 0
