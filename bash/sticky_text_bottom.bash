@@ -22,6 +22,7 @@ clean_virtual_window() {
 	tput cup $(($LINES))
 	tput el
 	tput rc
+	clear
 }
 trap clean_virtual_window EXIT
 
