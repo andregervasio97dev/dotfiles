@@ -20,7 +20,7 @@
 		"max-length": 2,
 		// "align":
 		// "justify":
-		"on-click": "kitty --class impala --name impala impala",
+		"on-click": "kitty --class nmcli --name nmcli nmcli device wifi list",
 		// "on-click-middle":
 		// "on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-disconnected-symbolic",
 		// "on-update":

@@ -5,14 +5,25 @@ LINES=$(tput lines)
 
 source ~/dotfiles/bash/colors.bash
 
-set_window()
+set_virtual_window()
 {
     # Create a virtual window that is two lines smaller at the bottom.
 	# Clear with tput reset
 	clear
     tput csr 0 $(($LINES-2))
 }
-set_window 
+set_virtual_window 
+
+clean_virtual_window() {
+	tput csr 0 $(($LINES))
+	tput sc
+	tput cup $(($LINES - 1))
+	tput el
+	tput cup $(($LINES))
+	tput el
+	tput rc
+}
+trap clean_virtual_window EXIT
 
 sticky_text()
 {
@@ -20,7 +31,6 @@ sticky_text()
 
 	tput sc
 
-    # Move cursor to last line in your screen
 	tput cup $LINES 0;
 	tput el
     echo -n -e "${output_string}"

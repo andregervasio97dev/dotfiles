@@ -51,7 +51,4 @@ if cd ~/dotfiles/scripts/system/packages/; then
 fi
 
 echo -e "${GREEN}Instalation successful!${RESET}"
-tput csr 0 $(($LINES))
-tput cup $(($LINES - 1)) 0
-tput el
 exit 0

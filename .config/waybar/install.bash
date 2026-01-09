@@ -15,7 +15,6 @@ DEPENDENCIES=(
 	"pipewire-pulse"
 	"ncpamixer"
 	"otf-commit-mono-nerd"
-	"impala"
 )
 
 main() {
