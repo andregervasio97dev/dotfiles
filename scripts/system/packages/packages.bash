@@ -67,6 +67,7 @@ base_apps() {
 		xdg-desktop-portal-gtk
 		hyprpolkitagent
 		hyprpaper
+		hyprlock
 		hyprshot
 		hyprlauncher
 		hyprpicker
