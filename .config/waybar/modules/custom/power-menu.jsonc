@@ -1,5 +1,5 @@
 {
-	"group/power_menu": {
+	"group/power-menu": {
 		"orientation": "inherit",
 		"drawer": {
 			"transition-duration": 200,

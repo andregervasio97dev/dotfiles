@@ -1,7 +1,7 @@
 {
 	"include": [
 		/* modules-left */
-		"./modules/custom/power_menu.jsonc",
+		"./modules/custom/power-menu.jsonc",
 		"./modules/temperature.jsonc",
 		"./modules/cpu.jsonc",
 		"./modules/memory.jsonc",
@@ -9,6 +9,7 @@
 		/* modules-center */
 		"./modules/clock.jsonc",
 		/* modules-right */
+		"./modules/tray.jsonc",
 		"./modules/bluetooth.jsonc",
 		"./modules/network.jsonc",
 		"./modules/mpris.jsonc",
@@ -18,7 +19,7 @@
 		/* Extra */
 	],
 	"modules-left": [
-		"group/power_menu",
+		"group/power-menu",
 		"temperature",
 		"cpu",
 		"memory",
@@ -28,6 +29,7 @@
 		"clock"
 	],
 	"modules-right": [
+		"tray",
 		"bluetooth",
 		"network",
 		"mpris",
@@ -36,11 +38,10 @@
 		"battery"
 	],
 	/* Options */
-	"layer": "top",
+	"layer": "bottom",
 	"height": 0,
 	"width": 0,
 	"margin": 0,
-	"spacing": 5,
-	"dock": "dock",
+	"spacing": 10,
 	"reload_style_on_change": true
 }

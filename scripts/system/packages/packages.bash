@@ -77,6 +77,7 @@ base_apps() {
 	local flatpak=(
 		com.valvesoftware.Steam
 		com.stremio.Stremio
+		com.discordapp.Discord
 	)
 	
 	echo -e "${GREEN}Running programs installation...${RESET}"

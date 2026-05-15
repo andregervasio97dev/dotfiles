@@ -214,6 +214,10 @@ label:focus {
 	background-color: #f53c3c;
 }
 
+#custom-power-menu {
+	background-color: #000000;
+}
+
 #custom-media {
 	background-color: #66cc99;
 	color: #2a5c45;
